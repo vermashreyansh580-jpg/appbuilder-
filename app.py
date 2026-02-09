@@ -6,7 +6,7 @@ import io, re, base64, json, datetime, zipfile
 app = Flask(__name__)
 
 # --- CONFIG ---
-GEMINI_KEY = "AIzaSyBupBVmZiWpsF5WnuuSlocOzsuKJFz5O1w"
+GEMINI_KEY = "AIzaSyCLMcD33glXsaNHw9f094DblYilJI1BxeI"
 genai.configure(api_key=GEMINI_KEY)
 
 SUPABASE_URL = "https://bhswajnmodtdzupedxnk.supabase.co"
@@ -94,4 +94,5 @@ def download():
     return send_file(mem, mimetype='application/zip', as_attachment=True, download_name='project.zip')
 
 if __name__ == '__main__':
+
     app.run(debug=True, port=5000)
